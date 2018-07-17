@@ -51,6 +51,15 @@ case $OS in
                 sudo apt-get -y update
                 sudo apt-get -y install g++ make cmake libuv-dev libssl-dev
             ;;
+	    
+            Debian)
+
+                echo "Linux, Debian"
+
+                sudo apt-add-repository -y ppa:linuxjedi/ppa
+                sudo apt-get -y update
+                sudo apt-get -y install g++ make cmake libuv-dev libssl-dev
+            ;;
 
             *) echo "Your system $KERNEL is not supported"
         esac
